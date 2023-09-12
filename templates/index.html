@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Estados</title>
+</head>
+<body>
+    <form action="/busca" method="POST">
+        <label for="estado">Digite a sigla do estado:</label>
+        <input type="text" name="estado" id="estado">
+        <input type="submit" value="Buscar">
+    </form>
+    <p>
+        {{estado_info}}
+    </p>
+</body>
+</html>
