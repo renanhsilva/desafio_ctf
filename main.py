@@ -1,7 +1,7 @@
 #crie um banco sqlite3 com nomes dos estados, siglas, populacao, regiao e referencia para uma imagem da bandeira
 
 import sqlite3
-from flask import Flask, jsonify, request, render_template  
+from flask import Flask, jsonify, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -36,6 +36,11 @@ conn.commit()
 conn.close()
 
 @app.route('/')
+def root():
+    # Redirecione os usuários da raiz para a rota desejada (por exemplo, '/index')
+    return redirect('busca?estado=RJ')
+
+@app.route('/busca')
 def get_estado():
     conn = sqlite3.connect('estados.db')
     cursor = conn.cursor()
