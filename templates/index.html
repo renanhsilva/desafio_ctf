@@ -3,15 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Busca de Estados</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 24px;
+            color: #e67e22;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333333;
+        }
+
+        form {
+            width: 300px;
+            margin-left: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        select {
+            width: 100%;
+            border: 1px solid #e67e22;
+            color: #333333;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid #e67e22;
+            color: #ffffff;
+            background-color: #e67e22;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        img {
+        width: 25%;
+        height: 50%;
+        max-width: 200px;
+        margin-top: 20px;
+        }
+
+        .erro {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <form action="/busca" method="POST">
-        <label for="estado">Digite a sigla do estado:</label>
-        <input type="text" name="estado" id="estado">
-        <input type="submit" value="Buscar">
-    </form>
-    <p>
-        {{estado_info}}
-    </p>
+    <header>
+        <h1>Agencias no Sudeste</h1>
+    </header>
+        <form action="/" method="get">
+            <select name="estado">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <p>
+            <img src="{{ imagem }}" alt="Bandeira do Estado">
+        </p>
+        <p>
+            <strong>Nome:</strong> {{ nome }}<br>
+            <strong>População:</strong> {{ populacao }}<br>
+            <strong>Região:</strong> {{ regiao }}<br>
+            <strong>Numero de Agencias:</strong> {{ numero_agencias }}<br>
+        </p>
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
 </body>
 </html>
