@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Estados</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 24px;
+            color: #e67e22;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333333;
+            font-size: 26px;
+        }
+
+        form {
+            width: 500px;
+            font-size: 30px;
+            margin: 0; /* Remova as margens anteriores */
+            left: 0; /* Coloca o formulário na borda esquerda */
+        }
+
+        select {
+            width: 100%;
+            border: 1px solid #e67e22;
+            color: #333333;
+            font-size: 30px; 
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid #e67e22;
+            color: #ffffff;
+            background-color: #e67e22;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 30px; 
+        }
+
+        img {
+        width: 40%;
+        height: 50%;
+        max-width: 500px;
+        margin-top: 20px;
+        }
+
+        .erro {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agencias no Sudeste</h1>
+    </header>
+        <p>
+            História do Itaú começa com a fundação do Banco Central de Crédito em 30 de dezembro de 1943, por Alfredo Egydio de Souza Aranha. O banco foi autorizado pela Caixa de Mobilização e Fiscalização Bancária a realizar operações bancárias em 1944, com a emissão das primeiras cartas patentes. A primeira agência foi aberta em 2 de janeiro de 1945, localizada na então sede do banco. 
+        </p>
+        <form action="/busca" method="get">
+            <select name="estado">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <p>
+            <img src="{{ imagem }}" alt="Bandeira do Estado">
+        </p>
+        <p>
+            <strong>Nome:</strong> {{ nome }}<br>
+            <strong>População:</strong> {{ populacao }}<br>
+            <strong>Região:</strong> {{ regiao }}<br>
+            <strong>Numero de Agencias:</strong> {{ qtd_agencias }}<br>
+        </p>
+</body>
+</html>
