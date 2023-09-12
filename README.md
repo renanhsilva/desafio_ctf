@@ -1,10 +1,10 @@
 # Desafio CTF
 
-Desafio para CTF 
+Desafio para CTF em formato de docker
 
 ## Como executar
 
-Primeiro, clone o repositório
+Clone o repositório
 
 ```bash
 git clone https://github.com/renanhsilva/desafio_ctf
