@@ -7,10 +7,9 @@ Desafio para CTF
 Primeiro, clone o repositório
 
 ```bash
-  git clone https://github.com/renanhsilva/CTF_1
-```
+  git clone https://github.com/renanhsilva/desafio_ctf
 
-Depois execute o docker compose
+Entre na pasta do clone e execute o docker compose
 
 ```bash
     docker-compose up
