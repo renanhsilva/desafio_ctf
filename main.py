@@ -1,6 +1,5 @@
 #crie um banco sqlite3 com nomes dos estados, siglas, populacao, regiao e referencia para uma imagem da bandeira
 
-import re
 import sqlite3
 from flask import Flask, jsonify, request, render_template  
 
@@ -58,5 +57,6 @@ def get_estado():
     return render_template('index.html', nome = nome, imagem = imagem, populacao = populacao, qtd_agencias = qtd_agencias, regiao = regiao)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
+    
 
